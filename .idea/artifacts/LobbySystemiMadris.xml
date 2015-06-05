@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LobbySystemiMadris">
+    <output-path>$USER_HOME$/Desktop/Minecraft server/plugins</output-path>
+    <root id="archive" name="LobbySystemiMadris.jar">
+      <element id="module-output" name="LobbySystemiMadras" />
+      <element id="module-output" name="java" />
+    </root>
+  </artifact>
+</component>

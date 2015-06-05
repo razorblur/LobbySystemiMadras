@@ -1,0 +1,12 @@
+author: razorblur, xPlayCode
+version: 1.0
+name: LobbySystem
+main: me.razorblur.iMadras.Main
+
+commands:
+    setwarp:
+       description: Set a new warp
+       usage: /setwarp <name>
+    delwarp:
+       description: Delete a Warp
+       usage: /delwarp <name>

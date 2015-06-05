@@ -1,0 +1,59 @@
+iMadras LobbySystem:
+     Inventar:
+      - 0: Spieler Verstecken
+      - 4: Teleporter
+      - 8: Shop
+      Team+:
+       - 2: Silent Lobby
+       - 6: Name ändern
+     Commands:
+
+      - /tutorial
+      - /setwarp [Lobby|WartName]
+
+     Listener:
+
+
+      PlayerJoinEvent: ERLEDIGT
+       JoinMessage: aus
+
+       Zum erstenmall drauf:
+
+        ""
+        "&7Willkommen &a[Name] &7auf iMadras!"
+        ""
+        "&7Wir bieten dir sehr viele Spielmodis an (heart) "
+        "&7Willkommen in unsere Community (heart) "
+        ""
+        "§7Eine kleine Einweisung? &c/tutorial"
+        ""
+
+       nicht zum erstenmall drauf:
+
+        ""
+        "&7Willkommen zurück &a[Name] auf iMadras!"
+        ""
+
+
+      PlayerQuitEvent: ERLEDIGT
+       QuitMessage: aus
+
+      PlayerDeathEvent:
+
+       DeathMessage: Cancelled ERLEDIGT
+
+      PlayerEnterBedEvent: ERLEDIGT
+
+       cancelled
+
+      Listener (hatte kein Bock mehr alles so zu schreiben xD)
+
+       Falschaden aus! ERLEDIGT
+
+       PvP aus ERLEDIGT
+
+       Bauen/Abbauen aus ERLEDIGT
+
+       IMMER Tag
+
+       e.t.c zum canceln
