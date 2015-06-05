@@ -1,6 +1,7 @@
 package me.razorblur.listeners;
 
 import me.razorblur.iMadras.Main;
+import me.razorblur.inventories.InventoryManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -44,6 +45,11 @@ public class GeneralListeners implements Listener {
             player.sendMessage("");
         } else {
             player.sendMessage("§7Willkommen zurück §a[" + player.getName() + "] §7auf iMadras!");
+        }
+        if(!player.hasPermission("admin.lobby")) {
+            InventoryManager.setPlayerInventory(player);
+        } else {
+            InventoryManager.setAdminInventory(player);
         }
     }
 

@@ -10,3 +10,6 @@ commands:
     delwarp:
        description: Delete a Warp
        usage: /delwarp <name>
+    warp:
+       description: Teleport to a warp point
+       usage: /warp <name>

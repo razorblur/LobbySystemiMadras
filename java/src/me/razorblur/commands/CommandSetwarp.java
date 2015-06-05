@@ -49,6 +49,8 @@ public class CommandSetwarp implements CommandExecutor {
 
     private boolean setWarp(String warp_name, Location loc) {
         File cfg_file = new File(Main.dir+"//warps//"+warp_name+".yml");
+
+        // Check if file exists
         if(!cfg_file.exists()) {
             try {
                 cfg_file.createNewFile();
@@ -64,7 +66,7 @@ public class CommandSetwarp implements CommandExecutor {
         cfg.set(path+"Z", loc.getZ());
         cfg.set(path+"Yaw", loc.getYaw());
         cfg.set(path+"Pitch", loc.getPitch());
-        cfg.set(path+"world", loc.getWorld().getName());
+        cfg.set(path+"World", loc.getWorld().getName());
         try {
             cfg.save(cfg_file);
         } catch (IOException e) {
