@@ -1,7 +1,10 @@
 package me.razorblur.inventories;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.AnvilInventory;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -14,9 +17,9 @@ public class InventoryManager {
     public static void setPlayerInventory(Player player) {
         Inventory inv = player.getInventory();
         inv.clear();
-        inv.setItem(0, createItem("§7Spieler Verstecken", Material.STICK)); // SPIELER VERSTECKEN
-        inv.setItem(4, createItem("§7Teleporter", Material.COMPASS)); // TELEPORTER
-        inv.setItem(8, createItem("§6Shop", Material.GOLD_INGOT)); // SHOP
+        inv.setItem(0, Items.hide_players); // SPIELER VERSTECKEN
+        inv.setItem(4, Items.teleporter); // TELEPORTER
+        inv.setItem(8, Items.shop); // SHOP
     }
 
     public static void setAdminInventory(Player player) {
@@ -26,12 +29,27 @@ public class InventoryManager {
         inv.setItem(6, createItem("§6Namen Ändern", Material.NAME_TAG)); // NAMEN ÄNDERN
     }
 
-    private static ItemStack createItem(String name, Material material) {
+    public static ItemStack createItem(String name, Material material) {
         ItemStack item = new ItemStack(material, 1);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(name);
         item.setItemMeta(meta);
         return item;
+    }
+
+    public static Inventory getTeleporterInventory() {
+        Inventory inv = Bukkit.createInventory(null, 9*2, "§4Teleporter");
+        return inv;
+    }
+
+    public static Inventory getShopInventory() {
+        Inventory inv = Bukkit.createInventory(null, 9*2, "§4Shop");
+        return inv;
+    }
+
+    public static Inventory renameInventory() {
+        AnvilInventory inv = (AnvilInventory) Bukkit.createInventory(null, InventoryType.ANVIL, "Rename");
+        return inv;
     }
 
 }

@@ -10,9 +10,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerBedEnterEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.*;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -119,6 +117,16 @@ public class GeneralListeners implements Listener {
             event.setCancelled(true);
             event.setBuild(false);
         }
+    }
+
+    @EventHandler
+    public void onPickUp(PlayerPickupItemEvent event) {
+        event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onDrop(PlayerDropItemEvent event) {
+        event.setCancelled(true);
     }
 
     public GeneralListeners() {

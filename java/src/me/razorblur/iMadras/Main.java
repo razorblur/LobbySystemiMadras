@@ -3,6 +3,7 @@ package me.razorblur.iMadras;
 import me.razorblur.commands.CommandDelwarp;
 import me.razorblur.commands.CommandSetwarp;
 import me.razorblur.commands.CommandWarp;
+import me.razorblur.inventories.InventoryListener;
 import me.razorblur.listeners.GeneralListeners;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,6 +37,7 @@ public class Main extends JavaPlugin {
 
         // Register Listeners
         pluginManager.registerEvents(new GeneralListeners(), this);
+        pluginManager.registerEvents(new InventoryListener(), this);
 
         // Register Commands
         this.getCommand("setwarp").setExecutor(new CommandSetwarp());
