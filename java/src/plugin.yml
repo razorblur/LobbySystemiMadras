@@ -13,3 +13,6 @@ commands:
     warp:
        description: Teleport to a warp point
        usage: /warp <name>
+    build:
+       description: Activate or Deactivate the buidl mode
+       usage: /build

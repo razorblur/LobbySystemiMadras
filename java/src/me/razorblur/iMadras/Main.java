@@ -1,5 +1,6 @@
 package me.razorblur.iMadras;
 
+import me.razorblur.commands.CommandBuild;
 import me.razorblur.commands.CommandDelwarp;
 import me.razorblur.commands.CommandSetwarp;
 import me.razorblur.commands.CommandWarp;
@@ -43,6 +44,7 @@ public class Main extends JavaPlugin {
         this.getCommand("setwarp").setExecutor(new CommandSetwarp());
         this.getCommand("warp").setExecutor(new CommandWarp());
         this.getCommand("delwarp").setExecutor(new CommandDelwarp());
+        this.getCommand("build").setExecutor(new CommandBuild());
     }
 
     @Override
