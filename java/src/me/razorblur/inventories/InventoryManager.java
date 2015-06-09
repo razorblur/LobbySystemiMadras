@@ -8,6 +8,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 /**
  * Created by Nicolai on 06.06.2015.
  */
@@ -35,6 +37,14 @@ public class InventoryManager {
         item.setItemMeta(meta);
         return item;
     }
+
+    public static ItemStack setLore(ItemStack item, ArrayList<String> lore) {
+        ItemMeta meta = item.getItemMeta();
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+
 
     public static Inventory getTeleporterInventory() {
         Inventory inv = Bukkit.createInventory(null, 9*2, "§4Teleporter");
