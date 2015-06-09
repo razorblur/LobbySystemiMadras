@@ -18,7 +18,7 @@ public class InventoryManager {
         inv.clear();
         inv.setItem(0, Items.hide_players); // SPIELER VERSTECKEN
         inv.setItem(4, Items.teleporter); // TELEPORTER
-        inv.setItem(8, Items.shop); // SHOP
+        inv.setItem(8, Items.shop); // SHOPf
     }
 
     public static void setAdminInventory(Player player) {
