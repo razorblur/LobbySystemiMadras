@@ -47,7 +47,23 @@ public class InventoryManager {
 
 
     public static Inventory getTeleporterInventory() {
-        Inventory inv = Bukkit.createInventory(null, 9*2, "§4Teleporter");
+        Inventory inv = Bukkit.createInventory(null, 9*3, "§4Teleporter");
+
+        ItemStack spawn = createItem("§6Spawn", Material.COMPASS);
+        inv.setItem(13, spawn);
+
+        ItemStack wars_of_paradise = createItem("§9Wars of Paradise", Material.DIAMOND);
+        inv.setItem(9, wars_of_paradise);
+
+        ItemStack cliff_wars = createItem("§7Cliff Wars", Material.STONE);
+        inv.setItem(10, cliff_wars);
+
+        ItemStack atomic = createItem("§4Atomic", Material.FIREBALL);
+        inv.setItem(11, atomic);
+
+        ItemStack projekt_insee = createItem("§cProjekt: Insee", Material.SAND);
+        inv.setItem(12, projekt_insee);
+
         return inv;
     }
 
