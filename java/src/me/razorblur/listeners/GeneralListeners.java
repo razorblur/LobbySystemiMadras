@@ -135,7 +135,7 @@ public class GeneralListeners implements Listener {
             public void run() {
                 Bukkit.getServer().getWorld("world").setTime(0);
             }
-        }, 0L, 20 * 60L);
+        }, 0L, 20 * 120L);
     }
 
 }

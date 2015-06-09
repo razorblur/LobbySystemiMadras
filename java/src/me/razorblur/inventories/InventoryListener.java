@@ -18,6 +18,10 @@ import java.util.Collection;
 public class InventoryListener implements Listener {
 
 
+    /**
+     *  This method listens to inventory clicks
+     * @param event Event that get caused
+     */
     @EventHandler
     public void onClick(InventoryClickEvent event) {
         ItemStack clicked = event.getCurrentItem();
